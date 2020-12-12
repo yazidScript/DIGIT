@@ -20,7 +20,7 @@ public function loginadmin(Request $request)
     $pswdlower = strtolower(request('password'));
     $password = $data->password;
     if( $data->username == request('username') ){
-      if( Hash::check($pswdlower, $password) ){
+      if( $pswdlower == $password ){
         request()->session()->put('admin-logged', $data->username);
         return redirect('dashboard')->with('sukses','Berhasil masuk di DIGIT TEAMS');
       }
