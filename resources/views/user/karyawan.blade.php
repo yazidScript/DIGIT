@@ -1,11 +1,9 @@
 @extends('layouts.master')
 @section('content')
 <div class="container mt-5 mb-5">
-
    <h5>Daftar Karyawan</h5>
-
   <div class="row">
-      @foreach($karyawan as $data)
+      @foreach($data_karyawan as $data)
     <div class="py-3 col-md-4">
     <div class="card container">
       <img class="rounded-circle container mt-3 mb-1" style="width:130px;height:100px;" src="../images.karyawan/{{$data->foto}}" alt="Card image cap">
@@ -22,6 +20,5 @@
     </div>
        @endforeach
     </div>
-     <a href="/home/karyawan" class="btn btn-warning text-white" style="font-size:17px">Lebih Banyak</a>
   </div>
 @stop

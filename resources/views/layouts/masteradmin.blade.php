@@ -74,14 +74,13 @@
 
         </li>
         <li class="nav-item has-treeview">
-          <a href="/karyawan" class="nav-link">
+          <a href="/dashboard/karyawan" class="nav-link">
             <i class="nav-icon fas fa-user"></i>
             <p>
                Karyawan
             </p>
           </a>
         </li>
-
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -106,6 +105,7 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
+
 <script src="/Admin/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="/Admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>

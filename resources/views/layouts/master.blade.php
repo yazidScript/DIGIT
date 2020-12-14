@@ -34,20 +34,11 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link text-default text-white" href="#">Home</a>
+          <a class="nav-link text-default text-white" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Karyawan</a>
+          <a class="nav-link text-white" href="/home/karyawan">Karyawan</a>
         </li>
-        <li class="nav-item dropdown">
-       <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Kategori
-       </a>
-       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-         <a class="dropdown-item" href="#">WEB</a>
-         <a class="dropdown-item" href="#">APPS</a>
-       </div>
-     </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="/login-admin">Login</a>
         </li>
@@ -82,13 +73,10 @@
             <a href="/">Home</a>
           </p>
           <p>
-            <a href="/beranda/paket">Karyawan</a>
+            <a href="/home/karyawan">Karyawan</a>
           </p>
           <p>
-            <a href="/beranda/informasi">KategorI</a>
-          </p>
-          <p>
-            <a href="/beranda/informasi">About</a>
+            <a href="/login-admin">Login</a>
           </p>
         </div>
         <!-- Grid column -->

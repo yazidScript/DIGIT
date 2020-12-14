@@ -1,11 +1,11 @@
 @extends('layouts.masteradmin')
 @section('content')
 
-<div class="container " id="booking-id">
+<div class="container ">
 <div class="row justify-content-center m-auto">
    <div class="col-md-8">
-       <div class="card">
-           <div class="card-header bg-primary text-white text-left">Karyawan</div>
+       <div class="card mt-3">
+           <div class="card-header bg-warning text-white text-left">Karyawan</div>
 
            <div class="card-body">
                <form method="POST" action="/karyawan/tambah-karyawan" enctype="multipart/form-data">
@@ -53,7 +53,7 @@
                        <span style="color:red; margin-left: 240px">{{ $errors->first('foto') }}</span>
                    </div>
                    <div class="text-center">
-                           <button class="btn btn-primary btn-block my-4 mx-auto col-md-10" type="submit">Tambah</button>
+                           <button class="btn btn-warning btn-block my-4 mx-auto col-md-10" type="submit">Tambah</button>
                    </div>
                </form>
            </div>

@@ -7,6 +7,7 @@ use \App\Admin;
 use \App\karyawan;
 use DB,Hash;
 use Auth;
+use View;
 
 class AdminController extends Controller
 {
@@ -38,9 +39,10 @@ public function logoutadmin()
 
 
   //dashboard admin
-  public function dashboard()
+  public function dashboard(Request $request)
   {
-    return view('admin.dashboard');
+    $count = Karyawan::count();
+    return View::make('admin.dashboard')->with('count', $count);
   }
 
 
@@ -48,6 +50,7 @@ public function logoutadmin()
    //Karyawan
 
    public function karyawan(Request $request){
+
      $data_karyawan = Karyawan::all();
      return view('admin.Karyawan/karyawan')->with(compact('data_karyawan'));
    }
@@ -76,7 +79,7 @@ public function logoutadmin()
           'alamat'=>$request->alamat,
           'foto' => $filename,
       ]);
-    return redirect("/karyawan")->with('sukses','data berhasil di tambah');
+    return redirect("/dashboard/karyawan")->with('sukses','data berhasil di tambah');
     }
     public function editkaryawan($id)
     {
@@ -103,16 +106,16 @@ public function logoutadmin()
              'nama' => $request->up_nama,
              'email' => $request->up_email,
              'notlp' => $request->up_notlp,
-             'posisi' => $request->up_poisi,
+             'posisi' => $request->up_posisi,
              'alamat' => $request->up_alamat,
               'foto' => $filename
             ]);
       }
-      return redirect('/karyawan')->with('sukses','data berhasil di update');
+      return redirect('/dashboard/karyawan')->with('sukses','data berhasil di update');
     }
     public function deletekaryawan($id)
     {
       Karyawan::where('id',$id)->delete();
-      return redirect('/karyawan')->with('sukses','sukses delete data');
+      return redirect('/dashboard/karyawan')->with('sukses','sukses delete data');
     }
 }

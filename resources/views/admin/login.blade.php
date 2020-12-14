@@ -103,6 +103,9 @@
             <a href="/">Home</a>
           </p>
           <p>
+            <a href="/home/karyawan">Karyawan</a>
+          </p>
+          <p>
             <a href="/login-admin">Login</a>
           </p>
         </div>
